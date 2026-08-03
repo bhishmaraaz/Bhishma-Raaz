@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/home/Hero";
 import ExperienceEducation from "@/components/ExperienceEducation";
 import Skills from "@/components/Skills";
 import Research from "@/components/Research";
