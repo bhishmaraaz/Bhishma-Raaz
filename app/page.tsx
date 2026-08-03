@@ -5,6 +5,8 @@ import Skills from "@/components/Skills";
 import Research from "@/components/Research";
 import Resources from "@/components/Resources";
 import Gallery from "@/components/Gallery";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,7 +18,8 @@ export default function Home() {
       <Research />
       <Resources />
       <Gallery />
-      {/* Module 4 (Contact, Footer, SEO & Deployment) अन्तिम चरणमा थपिनेछ */}
+      <Contact />
+      <Footer />
     </main>
   );
 }
