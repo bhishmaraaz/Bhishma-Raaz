@@ -32,7 +32,7 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              नमस्कार! म **भीष्मराज ढकाल (Bhishma Raaz Dhamala)**। माध्यमिक तह गणित शिक्षक तथा M.Ed. शोधकर्ता। गणित शिक्षणलाई आधुनिक ICT, GeoGebra र व्यावहारिक प्रयोगमार्फत सरल र प्रभावकारी बनाउन क्रियाशील।
+              नमस्कार! म **भीष्मराज धमला (Bhishma Raaz Dhamala)**। माध्यमिक तह गणित शिक्षक तथा M.Ed. शोधकर्ता। गणित शिक्षणलाई आधुनिक ICT, GeoGebra र व्यावहारिक प्रयोगमार्फत सरल र प्रभावकारी बनाउन क्रियाशील।
             </p>
 
             {/* Action Buttons */}
