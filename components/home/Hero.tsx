@@ -77,7 +77,7 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Image / Graphic Column */}
+          {/* Right Image Column */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl p-2 bg-gradient-to-b from-blue-500/20 via-slate-800 to-slate-900 border border-slate-800 shadow-2xl">
               <div className="w-full h-full rounded-xl overflow-hidden bg-slate-900 relative flex items-center justify-center">
@@ -86,18 +86,19 @@ export default function Hero() {
                 <img
                   src="/profile.jpg"
                   alt="Bhishma Raaz Dhamala"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-xl"
                   onError={(e) => {
                     const target = e.currentTarget;
-                    target.style.display = 'none';
+                    target.style.display = "none";
                     const next = target.nextElementSibling as HTMLElement | null;
                     if (next) {
-                      next.style.display = 'flex';
+                      next.classList.remove("hidden");
+                      next.classList.add("flex");
                     }
                   }}
                 />
 
-                {/* Fallback Display if image isn't loaded */}
+                {/* Fallback Display if image is missing */}
                 <div className="hidden absolute inset-0 bg-slate-900 flex-col items-center justify-center text-center p-6 space-y-3">
                   <div className="w-20 h-20 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center text-3xl font-extrabold border border-blue-500/30">
                     BR
