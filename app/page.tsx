@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Navbar from "@/components/Navbar"; // वा तपाईंको Navbar Component को नाम
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
@@ -8,25 +9,30 @@ export default function HomePage() {
   const [selectedMonth, setSelectedMonth] = useState("Shrawan");
 
   return (
-    <div className="bg-slate-100 min-h-screen text-slate-800 font-sans pt-28 sm:pt-32 pb-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+    <div className="bg-slate-100 min-h-screen text-slate-800 font-sans">
+      
+      {/* 1. TOP NAVBAR / HEADER */}
+      <Navbar />
 
-        {/* 1. NOTICE TICKER BAR */}
+      {/* 2. MAIN CONTAINER WITH EXACT TOP PADDING */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-10 space-y-5">
+
+        {/* NOTICE TICKER BAR */}
         <div className="bg-white border border-slate-200 rounded-md shadow-sm flex items-center overflow-hidden">
           <div className="bg-blue-800 text-white font-bold text-xs sm:text-sm px-4 py-2.5 uppercase tracking-wider shrink-0">
             NOTICE
           </div>
-          <div className="px-4 py-2 text-xs sm:text-sm text-slate-700 font-medium whitespace-nowrap overflow-hidden text-ellipsis w-full flex items-center gap-6">
+          <div className="px-4 py-2 text-xs sm:text-sm text-slate-700 font-medium whitespace-nowrap overflow-hidden text-ellipsis w-full flex items-center gap-6 animate-pulse">
             <span>• GeoGebra सम्बन्धी आधारभूत सिकाइ कार्यशाला सञ्चालन हुने</span>
             <span>• Filmora 14 तथा ICT सामग्री उपयोग सम्बन्धी तालिम</span>
             <span>• माध्यमिक तह गणित नतिजा विश्लेषण टुल अद्यावधिक गरिएको छ</span>
           </div>
         </div>
 
-        {/* 2. MAIN CONTENT GRID (8 Cols Left, 4 Cols Right) */}
+        {/* MAIN CONTENT GRID (8 Cols Left, 4 Cols Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-          {/* LEFT SECTION: Featured Banner & Article Posts (8 Cols) */}
+          {/* LEFT SECTION (8 Cols) */}
           <div className="lg:col-span-8 space-y-6">
 
             {/* Featured Banner / Carousel */}
@@ -48,10 +54,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Blog Post List */}
+            {/* Post Cards */}
             <div className="space-y-4">
 
-              {/* Post 1 */}
+              {/* Card 1 */}
               <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 flex flex-col sm:flex-row gap-4 hover:shadow-md transition">
                 <div className="sm:w-48 h-36 bg-blue-900 rounded-md overflow-hidden shrink-0 flex items-center justify-center text-white font-bold text-center p-2">
                   <div className="border border-blue-400/40 p-3 rounded w-full h-full flex flex-col justify-center items-center">
@@ -79,7 +85,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Post 2 */}
+              {/* Card 2 */}
               <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 flex flex-col sm:flex-row gap-4 hover:shadow-md transition">
                 <div className="sm:w-48 h-36 bg-blue-900 rounded-md overflow-hidden shrink-0 flex items-center justify-center text-white font-bold text-center p-2">
                   <div className="border border-blue-400/40 p-3 rounded w-full h-full flex flex-col justify-center items-center">
@@ -111,10 +117,10 @@ export default function HomePage() {
 
           </div>
 
-          {/* RIGHT SIDEBAR SECTION (4 Cols) */}
+          {/* RIGHT SIDEBAR (4 Cols) */}
           <div className="lg:col-span-4 space-y-6">
 
-            {/* Contact Profile Box */}
+            {/* Profile Contact */}
             <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-5 text-center">
               <h4 className="font-bold text-slate-700 text-xs border-b pb-2 mb-4 uppercase tracking-wider">Contact</h4>
               <div className="w-32 h-40 mx-auto overflow-hidden rounded border-2 border-blue-600 shadow-sm mb-3">
@@ -133,7 +139,7 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Date Converter Box */}
+            {/* Date Converter */}
             <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-4">
               <div className="bg-blue-800 text-white text-xs font-bold p-2 text-center rounded mb-3">
                 Nepali Date Converter
@@ -163,10 +169,11 @@ export default function HomePage() {
 
         </div>
 
-      </div>
+      </main>
 
-      {/* Footer */}
+      {/* 3. FOOTER */}
       <Footer />
+
     </div>
   );
 }
